@@ -1,0 +1,10 @@
+.navbar {
+  background-color: green;
+  width: 100%;
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}

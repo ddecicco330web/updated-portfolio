@@ -9,15 +9,11 @@ import './App.scss';
 function App() {
   return (
     <div className="app">
-      <header>
-        <NavbarView />
-        <HeaderView />
-      </header>
-      <main>
-        <AboutView />
-        <ProjectsView />
-        <ContactView />
-      </main>
+      <NavbarView />
+      <HeaderView />
+      <AboutView />
+      <ProjectsView />
+      <ContactView />
     </div>
   );
 }

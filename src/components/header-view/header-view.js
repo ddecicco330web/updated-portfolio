@@ -1,8 +1,8 @@
 const HeaderView = () => {
   return (
-    <section className="header" id="header">
+    <header className="header" id="header">
       Header
-    </section>
+    </header>
   );
 };
 
