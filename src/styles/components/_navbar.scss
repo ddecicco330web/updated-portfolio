@@ -1,10 +1,77 @@
 .navbar {
-  background-color: green;
+  display: flex;
+  align-items: center;
+
+  background-color: transparent;
+
   width: 100%;
   height: $navbar-height;
+
   position: fixed;
   top: 0;
   left: 0;
 
+  padding: 3rem;
+
   z-index: 1;
+  transition: all 0.4s;
+
+  a:not(:last-of-type) {
+    margin-right: 2rem;
+  }
+
+  &--scrolled {
+    height: 7rem;
+    background: linear-gradient(
+      to right bottom,
+      $color-gradient-start,
+      $color-gradient-end
+    );
+    box-shadow: 0 3px 5px 1px rgba($color-black, 0.27);
+  }
+
+  &__brand {
+    font-size: 2rem;
+    color: $color-text-white;
+    text-decoration: none;
+  }
+
+  &__icon {
+    &,
+    &:link,
+    &:active {
+      width: 3rem;
+      height: 3rem;
+      fill: $color-text-white;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__menu-btn {
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+
+    div {
+      display: block;
+      height: 0.5rem;
+      border-radius: 1rem;
+      background-color: $color-text-white;
+    }
+
+    div:not(:last-child) {
+      width: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    div:last-child {
+      width: 2rem;
+      margin-left: auto;
+    }
+  }
 }
