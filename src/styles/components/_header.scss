@@ -1,6 +1,21 @@
 .header {
-  background-color: yellow;
   width: 100%;
   padding-top: $navbar-height;
+  padding-left: 3rem;
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  background-image: linear-gradient(
+      to right,
+      rgba($color-gradient-start, 0.8),
+      rgba($color-gradient-end, 0.8)
+    ),
+    url('../../../public/home-img.jpg');
+
+  background-size: cover;
+  background-attachment: fixed;
 }
