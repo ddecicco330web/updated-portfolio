@@ -1,4 +1,90 @@
 .about {
-  background-color: black;
+  background-color: $color-dark;
   width: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(4, 1fr);
+
+  padding: 12rem 10rem;
+  grid-row-gap: 3rem;
+
+  // Left Side
+  &__portrait {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+
+    object-fit: cover;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+
+    &-img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      border: 0.7rem solid $color-primary;
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100%;
+      top: -5rem;
+      left: 5rem;
+      z-index: 0;
+    }
+  }
+
+  &__resume-btn {
+    grid-column: 1 / span 1;
+    grid-row: 4 / -1;
+    justify-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    background: linear-gradient(
+      to right,
+      $color-gradient-start,
+      $color-gradient-end
+    );
+    color: inherit;
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    padding: 1rem 2rem;
+    width: 80%;
+
+    box-shadow: 0 0 2rem $color-resume-btn-shadow;
+    border-radius: 1px;
+
+    cursor: pointer;
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
+      fill: currentColor;
+    }
+  }
+
+  // Right Side
+  .heading-2--section-title {
+    grid-column: 3 / -1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+  }
+
+  .paragraph {
+    grid-column: 3 / -1;
+    grid-row: 2 / span 1;
+  }
+
+  .list {
+    grid-column: 3 / -1;
+    grid-row: 3 / -1;
+  }
 }

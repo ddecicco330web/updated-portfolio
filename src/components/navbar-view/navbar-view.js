@@ -28,7 +28,7 @@ const NavbarView = () => {
       </a>
       <a
         href="https://linkedin.com/in/dominicdecicco"
-        className="navbar__icon"
+        className="icon-btn"
         target="_blank"
         rel="noreferrer"
       >
@@ -41,7 +41,7 @@ const NavbarView = () => {
 
       <a
         href="https://github.com/ddecicco330web"
-        className="navbar__icon"
+        className="icon-btn"
         target="_blank"
         rel="noreferrer"
       >
