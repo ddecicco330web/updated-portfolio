@@ -1,0 +1,80 @@
+.project-card {
+  height: 30rem;
+  width: 30rem;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 2px;
+  transition: box-shadow 0.4s;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-black, 0.6);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  &--1 {
+    background-image: url('../../../public/Recipe_App.png');
+  }
+
+  &--2 {
+    background-image: url('../../../public/main_view.png');
+  }
+
+  &--3 {
+    background-image: url('../../../public/Chat_app.jpg');
+  }
+
+  &__info {
+    background-color: rgba($color-white, 0.9);
+
+    padding: 2rem;
+
+    width: 90%;
+    height: 90%;
+
+    transform: scale(0);
+    opacity: 0;
+
+    transition: all 0.5s;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 6px 2.4rem $color-black;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:hover &__info,
+  &:focus &__info {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &__links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-column-gap: 1rem;
+    height: 60%;
+  }
+}

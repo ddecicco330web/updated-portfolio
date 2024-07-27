@@ -2,13 +2,34 @@
   &,
   &:link,
   &:active {
+    display: inline-block;
     width: 3rem;
     height: 3rem;
-    fill: $color-text-white;
+    fill: $color-white;
 
     svg {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &--project-link {
+    &,
+    &:link,
+    &:active {
+      width: 4rem;
+      height: 4rem;
+      fill: $color-primary;
+      border: 2px solid $color-primary;
+      border-radius: 50%;
+      padding: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      fill: $color-white;
+      background-color: $color-primary;
     }
   }
 }
