@@ -1,5 +1,144 @@
 .contact {
-  background-color: gray;
+  background-color: $color-dark-1;
   width: 100%;
-  height: 100vh;
+  text-align: center;
+  padding: 5rem 3rem;
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-gap: 3rem;
+  }
+
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &--name {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+    }
+
+    &--email {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 1;
+    }
+
+    &--message {
+      grid-row: 2 / span 1;
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__form-label {
+    color: $color-contact-form;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    order: 1;
+
+    display: block;
+    text-align: left;
+    height: 1.5rem;
+
+    transition: font-size 0.3s;
+  }
+
+  &__form-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $color-contact-form;
+    margin-bottom: 0.5rem;
+    order: 2;
+
+    display: block;
+    width: 100%;
+
+    font-size: 1.4rem;
+    color: $color-white;
+    padding: 0.6rem 1.2rem;
+
+    transition: border-color 0.3s;
+
+    &:focus,
+    :focus-visible {
+      border-color: $color-primary;
+      outline: none;
+    }
+
+    &--message {
+      resize: none;
+    }
+  }
+
+  &__form-input:focus + &__form-label,
+  &__form-input:focus-visible + &__form-label {
+    color: $color-primary;
+    font-size: 1rem;
+  }
+
+  &__form-input:valid ~ &__form-error {
+    display: none;
+  }
+
+  &__form-error {
+    display: none;
+    order: 3;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__form-message {
+    grid-row: 3 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    display: none;
+
+    width: 80%;
+    padding: 1rem;
+    background-color: $color-dark-2;
+
+    .close-btn {
+      margin-left: 2rem;
+    }
+
+    &--visible {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__form-btn {
+    grid-row: 4 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    background-color: transparent;
+    color: $color-primary;
+
+    border-image: linear-gradient(
+      to right,
+      $color-gradient-start,
+      $color-gradient-end
+    );
+    border-image-slice: 1;
+    border-image-width: 1px;
+
+    padding: 1.3rem 5rem;
+
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-black;
+      border-image-width: 0;
+    }
+  }
 }

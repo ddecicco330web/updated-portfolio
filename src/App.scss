@@ -1,8 +1,10 @@
 @import './styles/base/abstracts';
 @import './styles/base/base';
 @import './styles/base/typography';
+@import './styles/base/utilities';
 
 @import './styles/components/about';
+@import './styles/components/close-btn';
 @import './styles/components/contact';
 @import './styles/components/header';
 @import './styles/components/icon-btn';

@@ -1,10 +1,14 @@
 .projects {
-  background-color: aqua;
+  background: linear-gradient(
+    to right,
+    $color-gradient-start,
+    $color-gradient-end
+  );
   width: 100%;
 
   &__title-row {
     width: 100%;
-    background-color: $color-dark;
+    background-color: $color-dark-1;
     text-align: center;
     padding-bottom: 2rem;
   }

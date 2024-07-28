@@ -7,14 +7,11 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
-  color: $color-white;
-  font-weight: 300;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
 img,
@@ -38,4 +35,8 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+input {
+  outline: none;
 }

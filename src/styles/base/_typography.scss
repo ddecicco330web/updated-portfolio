@@ -1,3 +1,9 @@
+body {
+  font-weight: 300;
+  line-height: 1.6;
+  color: $color-white;
+}
+
 p,
 h1,
 h2,
@@ -51,6 +57,10 @@ h6 {
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 1.7;
+
+  &--primary {
+    color: $color-primary;
+  }
 
   &--project-text {
     color: $color-primary;
