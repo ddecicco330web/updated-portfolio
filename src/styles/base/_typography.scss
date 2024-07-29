@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   color: $color-white;
+  font-family: 'Open sans', sans-serif;
 }
 
 p,
@@ -16,7 +19,7 @@ h6 {
 
 .heading-1 {
   font-size: 12rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -42,7 +45,7 @@ h6 {
 
 .heading-3 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -74,10 +77,12 @@ h6 {
   &__item {
     font-size: 1.7rem;
     margin-bottom: 1.6rem;
+    font-weight: 400;
 
     span {
       color: $color-primary;
       text-transform: uppercase;
+      font-weight: 700;
     }
   }
 }

@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import NavModalView from '../nav-modal-view/nav-modal-view';
 
 const NavbarView = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     // Change background if page is scrolled after a certain point
@@ -52,11 +54,17 @@ const NavbarView = () => {
         </svg>
       </a>
 
-      <button className="navbar__menu-btn">
+      <button
+        className="navbar__menu-btn"
+        onClick={() => {
+          setShowModal(true);
+        }}
+      >
         <div></div>
         <div></div>
         <div></div>
       </button>
+      <NavModalView showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 };

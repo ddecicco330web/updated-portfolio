@@ -56,16 +56,14 @@ const ContactView = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    const form = document.querySelector('.contact__form');
-
-    if (form.checkValidity()) {
+    if (e.target.checkValidity()) {
       setShowErrors({ name: false, email: false, message: false });
 
       emailjs
         .sendForm(
           'service_w4iphl5',
           'template_ykzxhcg',
-          form,
+          e.target,
           'B9AtGVDb0s4A6iO5I'
         )
         .then(
@@ -85,7 +83,7 @@ const ContactView = () => {
         Contact Me
       </h2>
 
-      <form className="contact__form">
+      <form className="contact__form" onSubmit={handleSubmit}>
         {/* NAME INPUT */}
         <div className="contact__form-group contact__form-group--name">
           <input
@@ -174,11 +172,7 @@ const ContactView = () => {
         </div>
 
         {/* SUBMIT BUTTON */}
-        <button
-          type="submit"
-          className="contact__form-btn"
-          onClick={handleSubmit}
-        >
+        <button type="submit" className="contact__form-btn">
           Send Message
         </button>
       </form>

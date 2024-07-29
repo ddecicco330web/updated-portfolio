@@ -132,10 +132,12 @@
     padding: 1.3rem 5rem;
 
     font-size: 1.6rem;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-primary;
       color: $color-black;
       border-image-width: 0;

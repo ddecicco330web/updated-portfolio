@@ -1,0 +1,42 @@
+.nav-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  background-color: rgba($color-black, 0.95);
+
+  width: 100vw;
+  height: 100vh;
+
+  z-index: 20;
+  transition: all 0.4s;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(5, min-content);
+    grid-template-columns: max-content;
+    justify-items: center;
+    grid-gap: 2.5rem;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 3rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
