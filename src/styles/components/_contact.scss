@@ -6,9 +6,10 @@
 
   &__form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     grid-template-rows: repeat(4, min-content);
     grid-gap: 3rem;
+    justify-content: center;
   }
 
   &__form-group {
@@ -16,18 +17,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    &--name {
-      grid-row: 1 / span 1;
-      grid-column: 1 / span 1;
-    }
-
-    &--email {
-      grid-row: 1 / span 1;
-      grid-column: 2 / span 1;
-    }
-
     &--message {
-      grid-row: 2 / span 1;
       grid-column: 1 / -1;
     }
   }

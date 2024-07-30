@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  width: 8px;
+
+  &-button {
+    display: block;
+    height: 0px;
+    border-radius: 0px;
+    background-color: $color-dark-2;
+  }
+
+  &-thumb {
+    background-color: $color-primary;
+    border-radius: 3px;
+  }
+
+  &-track {
+    background-color: $color-dark-2;
+  }
+}

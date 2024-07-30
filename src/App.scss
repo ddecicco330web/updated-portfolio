@@ -1,4 +1,6 @@
-@import './styles/base/abstracts';
+@import './styles/abstracts/mixins';
+@import './styles/abstracts/variables';
+
 @import './styles/base/base';
 @import './styles/base/typography';
 @import './styles/base/utilities';
@@ -12,3 +14,5 @@
 @import './styles/components/navbar';
 @import './styles/components/project-card';
 @import './styles/components/projects';
+
+@import './styles/layout/scrollbar';
