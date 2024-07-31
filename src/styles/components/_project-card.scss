@@ -13,6 +13,17 @@
   transition: box-shadow 0.4s;
   position: relative;
 
+  @include respond(tab-land) {
+    align-items: end;
+    height: 50rem;
+    width: 50rem;
+  }
+
+  @include respond(phone) {
+    height: 40rem;
+    width: 40rem;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -49,6 +60,13 @@
     opacity: 0;
 
     transition: all 0.5s;
+
+    @include respond(tab-land) {
+      height: auto;
+      width: 100%;
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
   &:hover,
