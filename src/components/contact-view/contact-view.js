@@ -15,7 +15,7 @@ const ContactView = () => {
   });
 
   useEffect(() => {
-    emailjs.init('B9AtGVDb0s4A6iO5I');
+    emailjs.init(process.env.REACT_APP_PUBLIC_KEY);
     const inputs = document.querySelectorAll('.contact__form-input');
 
     const handleInvalid = (e) => {
@@ -61,10 +61,10 @@ const ContactView = () => {
 
       emailjs
         .sendForm(
-          'service_w4iphl5',
-          'template_ykzxhcg',
+          process.env.REACT_APP_EMAIL_SERVICE,
+          process.env.REACT_APP_EMAIL_TEMPLATE,
           e.target,
-          'B9AtGVDb0s4A6iO5I'
+          process.env.REACT_APP_PUBLIC_KEY
         )
         .then(
           (result) => {
