@@ -36,7 +36,7 @@ const AboutView = () => {
 
       <ul className="list">
         <li className="list__item">
-          <span>City:</span> New York, NY
+          <span>City:</span> Calgary, AB
         </li>
         <li className="list__item">
           <span>Phone:</span> 347-697-2081
