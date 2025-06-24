@@ -10,7 +10,7 @@ const AboutView = () => {
       </div>
       <a
         className="about__resume-btn"
-        href={process.env.PUBLIC_URL + 'Dominic_DeCicco_Resume.pdf'}
+        href={process.env.PUBLIC_URL + 'Dominic DeCicco Resume.pdf'}
         download
       >
         <svg>

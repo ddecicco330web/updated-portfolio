@@ -5,7 +5,7 @@ const HeaderView = () => {
       <h2 className="heading-2">
         <span>I'm</span> Dominic DeCicco
       </h2>
-      <h3 className="heading-3">Fullstack Developer</h3>
+      <h3 className="heading-3">Web Developer</h3>
     </header>
   );
 };

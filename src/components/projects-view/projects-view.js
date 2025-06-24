@@ -9,10 +9,10 @@ const ProjectsView = () => {
       <div className="projects__project-list">
         <ProjectCardView
           index={1}
-          name="Recipes"
-          description="Django, Python, AWS S3"
-          gitHubLink="https://github.com/ddecicco330web/django-recipe-app"
-          siteLink="https://recipes330-b394d7d440dc.herokuapp.com/"
+          name="Plumbing Website (Mockup)"
+          description="React.js"
+          gitHubLink="https://github.com/ddecicco330web/plumbing-site"
+          siteLink="https://easyhomepipe.netlify.app/"
         />
 
         <ProjectCardView
@@ -25,10 +25,9 @@ const ProjectsView = () => {
 
         <ProjectCardView
           index={3}
-          name="Chat"
-          description="React Native, JS, Firebase"
-          gitHubLink="https://github.com/ddecicco330web/chat"
-          siteLink={null}
+          name="Educator Thesis Portfolio"
+          description="Wordpress"
+          siteLink="https://jeninnacalderon.com/"
         />
       </div>
     </section>

@@ -9,18 +9,20 @@ const ProjectCardView = ({
     <div className={`project-card project-card--${index}`}>
       <div className="project-card__info">
         <div className="project-card__links">
-          <a
-            className="icon-btn icon-btn--project-link"
-            href={gitHubLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <svg>
-              <use
-                xlinkHref={process.env.PUBLIC_URL + 'sprites.svg#icon-github'}
-              ></use>
-            </svg>
-          </a>
+          {gitHubLink && (
+            <a
+              className="icon-btn icon-btn--project-link"
+              href={gitHubLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg>
+                <use
+                  xlinkHref={process.env.PUBLIC_URL + 'sprites.svg#icon-github'}
+                ></use>
+              </svg>
+            </a>
+          )}
 
           {siteLink && (
             <a
