@@ -10,7 +10,7 @@ const ProjectsView = () => {
         <ProjectCardView
           index={1}
           name="Plumbing Website (Mockup)"
-          description="React.js"
+          description="HTML, SASS, JS"
           gitHubLink="https://github.com/ddecicco330web/plumbing-site"
           siteLink="https://easyhomepipe.netlify.app/"
         />
